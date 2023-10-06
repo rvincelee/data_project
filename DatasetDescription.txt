@@ -32,8 +32,8 @@ The team table current structure is:
     },
 So our database would need a players table and a teams table.
 
-Players(
-  id
+Player(
+  id: int
   first_name: string
   last_name: string
   position: char(2)
@@ -42,13 +42,21 @@ Players(
   weight_pounds: int
 )
 
-Teams(
-  id
+Team(
+  id: int
   abbreviation: string
   city: string
-  conference: string
-  division: string
   full_name: string
+)
+
+Division(
+  id: int
+  name: string
+)
+
+Conference(
+  id: int
+  name: string
 )
 
 As of now we are only using one data source. So no integreation with other datasources will be implemented into our project.
