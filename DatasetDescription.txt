@@ -1,0 +1,54 @@
+We are pulling data from https://www.balldontlie.io/home.html
+Our plan is to create an NBA database you can browse to look at players and their teams.
+The player table current is structure likeso:
+    {
+      "id":237,
+      "first_name":"LeBron",
+      "last_name":"James",
+      "position":"F",
+      "height_feet": 6,
+      "height_inches": 8,
+      "weight_pounds": 250,
+      "team":{
+        "id":14,
+        "abbreviation":"LAL",
+        "city":"Los Angeles",
+        "conference":"West",
+        "division":"Pacific",
+        "full_name":"Los Angeles Lakers",
+        "name":"Lakers"
+      }
+    }
+
+The team table current structure is:
+{
+      "id":14,
+      "abbreviation":"LAL",
+      "city":"Los Angeles",
+      "conference":"West",
+      "division":"Pacific",
+      "full_name":"Los Angeles Lakers",
+      "name":"Lakers"
+    },
+So our database would need a players table and a teams table.
+
+Players(
+  id
+  first_name: string
+  last_name: string
+  position: char(2)
+  height_feet: int
+  height_inches: int
+  weight_pounds: int
+)
+
+Teams(
+  id
+  abbreviation: string
+  city: string
+  conference: string
+  division: string
+  full_name: string
+)
+
+As of now we are only using one data source. So no integreation with other datasources will be implemented into our project.
