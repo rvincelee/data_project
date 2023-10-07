@@ -7,7 +7,6 @@ class CreatePlayers < ActiveRecord::Migration[7.0]
       t.integer :height_feet
       t.integer :height_inches
       t.integer :weight_lbs
-      t.references :teams, foreign_key: true
 
       t.timestamps
     end
