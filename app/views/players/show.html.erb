@@ -1,0 +1,32 @@
+<h1><%= "#{@player.first_name} #{@player.last_name}" %></h1>
+<h3>Player information</h3>
+<ul>
+  <li>
+    <% if @player.height_feet == nil %>
+      Height: Unknown
+    <% else %>
+      Height: <%= "#{@player.height_feet}'#{@player.height_inches}"%>
+    <% end %>
+  </li>
+  <li>
+    <% if @player.weight_lbs == nil %>
+      Weight: Unknown
+    <% else %>
+      Weight: <%= @player.weight_lbs %>
+    <% end %>
+  </li>
+  <li>
+      Position: <%= @player.position %>
+  </li>
+    <li>
+    Team: <a href="/team/<%= @player.team.id%>"><%= @player.team.name %></a>
+  </li>
+    <li>
+    Division: <a href="/team/<%= @player.team.division.id%>"><%= @player.team.division.name %></a>
+  </li>
+    <li>
+    Conference: <a href="/team/<%= @player.team.division.conference.id%>"><%= @player.team.division.conference.name %></a>
+  </li>
+</ul>
+
+<a href="/players">Return to all players</a>

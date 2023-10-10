@@ -30,23 +30,23 @@ The team table current structure is:
       "full_name":"Los Angeles Lakers",
       "name":"Lakers"
     },
-So our database would need a players table and a teams table.
+So our database would need a players table and a teams table at minimum, but we will also separte the conference and division located in teams into separate tables.
 
 Player(
   id: int
   first_name: string
   last_name: string
-  position: char(2)
+  position: string
   height_feet: int
   height_inches: int
-  weight_pounds: int
+  weight_lbs: int
 )
 
 Team(
   id: int
   abbreviation: string
   city: string
-  full_name: string
+  name: string
 )
 
 Division(
