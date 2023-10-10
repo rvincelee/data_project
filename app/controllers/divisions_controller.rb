@@ -5,5 +5,6 @@ class DivisionsController < ApplicationController
 
   def show
     @division = Division.find(params[:id])
+    @teams = @division.teams
   end
 end

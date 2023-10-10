@@ -3,9 +3,12 @@
 <li><%= @team.city %></li>
 <li><%= @team.abbreviation %></li>
 </ul>
+<h2> Division: <a href="/divisions/<%= @team.division.id %>"><%= @team.division.name %></a> </h2>
 <h3><%= @team.name %> Players</h3>
 <ul>
   <% @players.each do |player| %>
   <li><a href="/players/<%= player.id %>"><%= "#{player.first_name} #{player.last_name}" %></a></li>
   <% end %>
 </ul>
+
+<a href="/teams">Return to all teams</a>

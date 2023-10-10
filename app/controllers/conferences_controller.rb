@@ -5,5 +5,6 @@ class ConferencesController < ApplicationController
 
   def show
     @conference = Conference.find(params[:id])
+    @divisions = @conference.divisions
   end
 end

@@ -1,2 +1,12 @@
-<h1>Divisions#show</h1>
-<p>Find me in app/views/divisions/show.html.erb</p>
+<h1><%= @division.name %> Division</h1>
+<h2>Conference:
+  <a href="/conferences/<%= @division.conference.id %>"><%= @division.conference.name %></a>
+</h2>
+<h3><%= @division.name %> Teams</h3>
+<ul>
+  <% @teams.each do |team| %>
+  <li><a href="/teams/<%= team.id %>"><%= team.name %></a></li>
+  <% end %>
+</ul>
+
+<a href="/divisions">Return to all divisions</a>
