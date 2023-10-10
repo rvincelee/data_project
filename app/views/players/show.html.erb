@@ -19,13 +19,13 @@
       Position: <%= @player.position %>
   </li>
     <li>
-    Team: <a href="/team/<%= @player.team.id%>"><%= @player.team.name %></a>
+    Team: <a href="/teams/<%= @player.team.id%>"><%= @player.team.name %></a>
   </li>
     <li>
-    Division: <a href="/team/<%= @player.team.division.id%>"><%= @player.team.division.name %></a>
+    Division: <a href="/divisions/<%= @player.team.division.id%>"><%= @player.team.division.name %></a>
   </li>
     <li>
-    Conference: <a href="/team/<%= @player.team.division.conference.id%>"><%= @player.team.division.conference.name %></a>
+    Conference: <a href="/conferences/<%= @player.team.division.conference.id%>"><%= @player.team.division.conference.name %></a>
   </li>
 </ul>
 

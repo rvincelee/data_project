@@ -1,2 +1,11 @@
-<h1>Teams#show</h1>
-<p>Find me in app/views/teams/show.html.erb</p>
+<h1><%= @team.name %></h1>
+<ul>
+<li><%= @team.city %></li>
+<li><%= @team.abbreviation %></li>
+</ul>
+<h3><%= @team.name %> Players</h3>
+<ul>
+  <% @players.each do |player| %>
+  <li><a href="/players/<%= player.id %>"><%= "#{player.first_name} #{player.last_name}" %></a></li>
+  <% end %>
+</ul>
