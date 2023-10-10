@@ -2,6 +2,8 @@
 <p>Find me in app/views/home/index.html.erb</p>
 
 <ul>
-    <li><a href="/players">List of players</a></li>
-    <li><a href="/teams">List of teams</a></li>
+    <li><%= link_to('Players', players_path)%><br/></li>
+    <li><%= link_to('Teams', teams_path)%><br/></li>
+    <li><%= link_to('Divisions', divisions_path)%><br/></li>
+    <li><%= link_to('Conferences', conferences_path)%><br/></li>
 </ul>

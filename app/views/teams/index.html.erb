@@ -1,6 +1,6 @@
 <h1>All Teams</h1>
 
-<a href="/">Go back</a>
+<%= link_to('Back to Home', {controller: 'home', action: 'index'}) %>
 
 <ul>
   <% @teams.each do |team| %>
