@@ -4,10 +4,12 @@
 
 <ul>
   <% @players.each do |player| %>
-  <li>
-    <a href="/players/<%= player.id %>">
-      <%= player.first_name %> <%= player.last_name %>
-    </a>
-  </li>
+    <li>
+      <a href="/players/<%= player.id %>">
+        <%= player.first_name %> <%= player.last_name %>
+      </a>
+    </li>
   <% end %>
 </ul>
+
+<%= will_paginate @players %>

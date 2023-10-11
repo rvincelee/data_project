@@ -1,3 +1,7 @@
+<%= link_to('See all players', {controller: 'players', action: 'index'}) %>
+<br>
+<%= link_to("See team", team_path(@player.team, team_id: @player.team.id), class: 'back-link') %>
+
 <h1><%= "#{@player.first_name} #{@player.last_name}" %></h1>
 <h3>Player information</h3>
 <ul>
@@ -29,4 +33,3 @@
   </li>
 </ul>
 
-<a href="/players">See all players</a>
