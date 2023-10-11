@@ -1,33 +1,30 @@
 <h1>About</h1>
-<p>We are pulling data from https://www.balldontlie.io/home.html</p>
+<p>We are pulling data from <a href="https://www.balldontlie.io/home.html">https://www.balldontlie.io/home.html</a></p>
 <p>Our plan is to create an NBA database you can browse to look at players and their teams.</p>
 <p>The player table's structure is:</p>
 <ul>
-  {
-  <li>"id":237, </li>
-  <li>"first_name":"LeBron",</li>
-  <li>"last_name":"James",</li>
-  <li>"position":"F",</li>
+  <li> "id": 237, </li>
+  <li>"first_name": "LeBron",</li>
+  <li>"last_name": "James",</li>
+  <li>"position": "F",</li>
   <li> "height_feet": 6,</li>
   <li>"height_inches": 8,</li>
   <li>"weight_pounds": 250,</li>
-  <li>"team":{</li>
+  <li>"team":
     <ul>
-      <li>"id":14,</li>
-      <li>"abbreviation":"LAL",</li>
-      <li>"city":"Los Angeles",</li>
-      <li>"conference":"West",</li>
-      <li>"division":"Pacific",</li>
-      <li>"full_name":"Los Angeles Lakers",</li>
-      <li>"name":"Lakers"</li>}
+      <li>"id": 14,</li>
+      <li>"abbreviation": "LAL",</li>
+      <li>"city": "Los Angeles",</li>
+      <li>"conference": "West",</li>
+      <li>"division": "Pacific",</li>
+      <li>"full_name": "Los Angeles Lakers",</li>
+      <li>"name": "Lakers"</li>
     </ul>
-  }
+  </li>
 </ul>
-
 
 <p>The team table's structure is:</p>
 <ul>
-{
   <li>"id":14,</li>
   <li>"abbreviation":"LAL",</li>
   <li>"city":"Los Angeles",</li>
@@ -35,7 +32,6 @@
   <li>"division":"Pacific",</li>
   <li>"full_name":"Los Angeles Lakers",</li>
   <li>"name":"Lakers"</li>
-    }
 </ul>
 <p>So our database would need a players table and a teams table at minimum, but we will also separte the conference and division located in teams into separate tables.</p>
 <p>Our tables will look like this:</p>
