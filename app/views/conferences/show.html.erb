@@ -1,9 +1,8 @@
+<%= link_to('See all conferences', {controller: 'conferences', action: 'index'}) %>
 <h1><%= @conference.name %> Conference</h1>
 <h3><%= @conference.name %> Conference Divisions</h3>
 <ul>
   <% @divisions.each do |division| %>
-  <li><a href="/divisions/<%= division.id %>"><%= division.name %></a></li>
+  <li><%= link_to division.name, division %></li>
   <% end %>
 </ul>
-
-<a href="/conferences">See all conferences</a>

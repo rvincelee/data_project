@@ -1,13 +1,9 @@
-<h1>All Players</h1>
-
 <%= link_to('Back to Home', {controller: 'home', action: 'index'}) %>
-
+<h1>Players</h1>
 <ul>
   <% @players.each do |player| %>
     <li>
-      <a href="/players/<%= player.id %>">
-        <%= player.first_name %> <%= player.last_name %>
-      </a>
+      <%= link_to "#{player.first_name} #{player.last_name}", player %>
     </li>
   <% end %>
 </ul>

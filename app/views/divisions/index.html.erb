@@ -1,13 +1,9 @@
-<h1>All Divisions</h1>
-
 <%= link_to('Back to Home', {controller: 'home', action: 'index'}) %>
-
+<h1>Divisions</h1>
 <ul>
   <% @divisions.each do |division| %>
   <li>
-    <a href="/divisions/<%= division.id %>">
-      <%= division.name %>
-    </a>
+    <%= link_to division.name, division %>
   </li>
   <% end %>
 </ul>

@@ -1,19 +1,15 @@
 <%= link_to('See all teams', {controller: 'teams', action: 'index'}) %>
 
 <h1><%= @team.name %></h1>
-
 <ul>
   <li><%= @team.city %></li>
   <li><%= @team.abbreviation %></li>
 </ul>
-
-<h2> Division: <a href="/divisions/<%= @team.division.id %>"><%= @team.division.name %></a> </h2>
-
+<h2> Division: <%= link_to @team.division.name, @team.division %></h2>
 <h3><%= @team.name %> Players</h3>
-
 <ul>
   <% @players.each do |player| %>
-  <li><a href="/players/<%= player.id %>"><%= "#{player.first_name} #{player.last_name}" %></a></li>
+    <li><%= link_to "#{player.first_name} #{player.last_name}", player %></li>
   <% end %>
 </ul>
 
