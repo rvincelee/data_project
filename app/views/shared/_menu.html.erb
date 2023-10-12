@@ -6,3 +6,7 @@
   <%= link_to "Players", players_path %>
   <%= link_to "About", about_index_path %>
 </nav>
+<% if request.path != root_path %>
+  <%= link_to('Back to Home', {controller: 'home', action: 'index'}) %>
+  <br>
+<% end %>
