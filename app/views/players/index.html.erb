@@ -8,19 +8,13 @@
 
   <%= submit_tag('Search', class: 'btn btn-primary') %>
 <% end %>
-
-
-<ul class="list-inline">
- <div class="row g-5">
+<ul class="list-inline row g-3">
   <% @players.each do |player| %>
-  <div class="col-lg-3">
-    <li class="list-inline-item">
-      <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>
-    </li>
-    </div>
+      <li class="col-2 list-inline-item">
+        <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>
+      </li>
   <% end %>
 </ul>
-</div>
 </div>
 <div class="container text-center">
   <%= will_paginate @players %>

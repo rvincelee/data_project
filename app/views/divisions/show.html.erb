@@ -5,13 +5,9 @@
   <%= link_to @division.conference.name, @division.conference %>
 </h2>
 <h3><%= @division.name %> Teams</h3>
-  <ul class="list-inline">
-    <div class="row g-5">
+  <ul class="list-inline row g-5">
   <% @teams.each do |team| %>
-   <div class="col-lg-4">
-        <li class="list-inline-item"><%= link_to team.name, team %></li>
-    </div>
+    <li class="list-inline-item col"><%= link_to team.name, team %></li>
   <% end %>
-  </div>
 </ul>
 </div>
