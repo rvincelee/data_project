@@ -22,7 +22,7 @@
 <ul class="list-inline">
  <div class="row g-5">
   <% @players.each do |player| %>
-  <div class="col-lg-3">
+  <div class="col-6 col-md-4">
     <li class="list-inline-item"><%= link_to "#{player.first_name} #{player.last_name}", player %></li>
   </div>
   <% end %>

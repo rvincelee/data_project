@@ -1,27 +1,25 @@
 <div class="container text-center">
-<h1>Players</h1>
+  <h1>Players</h1>
 
-<%= form_tag(players_path, method: :get, class: 'search-form') do %>
-  <%= text_field_tag(:search, params[:search], placeholder: 'Search by name') %>
-
-  <%= select_tag(:position, options_for_select(Player.distinct.pluck(:position).reject(&:empty?), params[:position]), include_blank: 'Select a position') %>
-
-  <%= submit_tag('Search', class: 'btn btn-primary') %>
-<% end %>
-
-
-<ul class="list-inline">
- <div class="row g-5">
-  <% @players.each do |player| %>
-  <div class="col-lg-3">
-    <li class="list-inline-item">
-      <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>
-    </li>
-    </div>
+  <%= form_tag(players_path, method: :get, class: 'search-form') do %>
+    <%= text_field_tag(:search, params[:search], placeholder: 'Search by name') %>
+    <%= select_tag(:position, options_for_select(Player.distinct.pluck(:position).reject(&:empty?), params[:position]), include_blank: 'Select a position') %>
+    <%= submit_tag('Search', class: 'btn btn-primary') %>
   <% end %>
-</ul>
+
+  <ul class="list-inline">
+    <div class="row g-5">
+      <% @players.each do |player| %>
+        <div class="col-lg-4">
+          <li class="list-inline-item">
+            <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>
+          </li>
+        </div>
+      <% end %>
+    </div>
+  </ul>
 </div>
-</div>
+
 <div class="container text-center">
   <%= will_paginate @players %>
 </div>
