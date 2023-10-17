@@ -7,6 +7,14 @@ gem 'rest-client'
 
 gem 'will_paginate'
 
+gem 'bootstrap', '~> 5.3.1'
+
+gem 'autoprefixer-rails', '~> 9.1.0'
+
+gem 'popper_js', '~> 2.11', '>= 2.11.8'
+
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.8'
 

@@ -1,35 +1,47 @@
 <%= link_to('See all players', {controller: 'players', action: 'index'}) %>
 <br>
 <%= link_to("See team", team_path(@player.team, team_id: @player.team.id), class: 'back-link') %>
-
+<div class="text-center">
 <h1><%= "#{@player.first_name} #{@player.last_name}" %></h1>
 <h3>Player information</h3>
-<ul>
-  <li>
+<ul class="list-inline">
+<div class= "col">
+  <li class="list-inline-item">
     <% if @player.height_feet == nil %>
       Height: Unknown
     <% else %>
       Height: <%= "#{@player.height_feet}'#{@player.height_inches}"%>
     <% end %>
   </li>
-  <li>
-    <% if @player.weight_lbs == nil %>
+  </div>
+  <div class= "col">
+  <li class="list-inline-item">
+    <% if @player.weight_pounds == nil %>
       Weight: Unknown
     <% else %>
-      Weight: <%= @player.weight_lbs %>
+      Weight: <%= @player.weight_pounds %>
     <% end %>
   </li>
-  <li>
+  </div>
+    <div class= "col">
+  <li class="list-inline-item">
       Position: <%= @player.position %>
   </li>
-  <li>
+  </div>
+    <div class= "col">
+  <li class="list-inline-item">
     Team: <%= link_to @player.team.name, @player.team %>
   </li>
-  <li>
+  </div>
+    <div class= "col">
+  <li class="list-inline-item">
     Division: <%= link_to @player.team.division.name, @player.team.division %>
   </li>
-  <li>
+  </div>
+    <div class= "col">
+  <li class="list-inline-item">
     Conference: <%= link_to @player.team.division.conference.name, @player.team.division.conference %>
   </li>
+</div>
 </ul>
-
+</div>

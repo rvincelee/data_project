@@ -1,10 +1,12 @@
-<nav>
-  <%= link_to "Home", root_path %>
-  <%= link_to "Conferences", conferences_path %>
-  <%= link_to "Divisions", divisions_path %>
-  <%= link_to "Teams", teams_path %>
-  <%= link_to "Players", players_path %>
-  <%= link_to "About", about_index_path %>
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+   <div class="container">
+    <div class="navbar-brand"> <%= link_to "Home", root_path %></div>
+    <div class="nav-item"> <%= link_to "Conferences", conferences_path %></div>
+    <div class="nav-item"> <%= link_to "Divisions", divisions_path %></div>
+    <div class="nav-item"> <%= link_to "Teams", teams_path %></div>
+    <div class="nav-item"> <%= link_to "Players", players_path %></div>
+    <div class="nav-item"> <%= link_to "About", about_index_path %></div>
+  </div>
 </nav>
 <% if request.path != root_path %>
   <%= link_to('Back to Home', {controller: 'home', action: 'index'}) %>

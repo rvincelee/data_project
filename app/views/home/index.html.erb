@@ -1,8 +1,14 @@
+<div class="container text-center">
 <h1>NBA Database</h1>
 <p>Welcome to the NBA Database!</p>
-<ul>
-    <li><%= link_to('Players', players_path)%><br/></li>
-    <li><%= link_to('Teams', teams_path)%><br/></li>
-    <li><%= link_to('Divisions', divisions_path)%><br/></li>
-    <li><%= link_to('Conferences', conferences_path)%><br/></li>
-</ul>
+  <ul class="list-inline">
+    <div class="row g-5">
+     <div class="col">
+        <li class="list-inline-item"><%= link_to('Players', players_path)%><br/></li>
+<li class="list-inline-item"><%= link_to('Teams', teams_path)%><br/></li>
+<li class="list-inline-item"><%= link_to('Divisions', divisions_path)%><br/></li>
+<li class="list-inline-item"><%= link_to('Conferences', conferences_path)%><br/></li>
+      </div>
+    </div>
+  </ul>
+</div>

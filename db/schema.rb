@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_10_220755) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_07_080541) do
   create_table "conferences", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -19,19 +19,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_10_220755) do
 
   create_table "divisions", force: :cascade do |t|
     t.string "name"
-    t.integer "conference_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "conference_id", null: false
     t.index ["conference_id"], name: "index_divisions_on_conference_id"
   end
 
   create_table "players", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "position"
     t.integer "height_feet"
     t.integer "height_inches"
-    t.integer "weight_lbs"
+    t.integer "weight_pounds"
+    t.string "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "team_id", null: false
@@ -40,11 +40,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_10_220755) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.string "abbreviation"
     t.string "city"
-    t.integer "division_id"
+    t.string "abbreviation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "division_id", null: false
     t.index ["division_id"], name: "index_teams_on_division_id"
   end
 

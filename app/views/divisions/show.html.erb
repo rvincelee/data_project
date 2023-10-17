@@ -1,11 +1,17 @@
 <%= link_to('See all divisions', {controller: 'divisions', action: 'index'}) %>
+<div class="container text-center">
 <h1><%= @division.name %> Division</h1>
 <h2>Conference:
   <%= link_to @division.conference.name, @division.conference %>
 </h2>
 <h3><%= @division.name %> Teams</h3>
-<ul>
+  <ul class="list-inline">
+    <div class="row g-5">
   <% @teams.each do |team| %>
-    <li><%= link_to team.name, team %></li>
+   <div class="col-lg-4">
+        <li class="list-inline-item"><%= link_to team.name, team %></li>
+    </div>
   <% end %>
+  </div>
 </ul>
+</div>

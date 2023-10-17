@@ -1,3 +1,4 @@
+<div class="container text-center">
 <h1>Players</h1>
 
 <%= form_tag(players_path, method: :get, class: 'search-form') do %>
@@ -8,12 +9,19 @@
   <%= submit_tag('Search', class: 'btn btn-primary') %>
 <% end %>
 
-<ul>
+
+<ul class="list-inline">
+ <div class="row g-5">
   <% @players.each do |player| %>
-    <li>
+  <div class="col-lg-3">
+    <li class="list-inline-item">
       <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>
     </li>
+    </div>
   <% end %>
 </ul>
-
-<%= will_paginate @players %>
+</div>
+</div>
+<div class="container text-center">
+  <%= will_paginate @players %>
+</div>

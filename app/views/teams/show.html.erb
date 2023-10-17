@@ -1,10 +1,16 @@
 <%= link_to('See all teams', { controller: 'teams', action: 'index' }) %>
-
+<div class="container text-center">
 <h1><%= @team.name %></h1>
-<ul>
-  <li><%= @team.city %></li>
-  <li><%= @team.abbreviation %></li>
+<div class="row">
+<ul class="list-inline">
+<div class="col">
+  <li class="list-inline-item"><%= @team.city %></li>
+  </div>
+  <div class="col">
+  <li class="list-inline-item"><%= @team.abbreviation %></li>
+   </div>
 </ul>
+</div>
 <h2>Division: <%= link_to @team.division.name, @team.division %></h2>
 
 <%= form_tag(team_path(@team), method: :get, class: 'search-form') do %>
@@ -13,9 +19,12 @@
 <% end %>
 
 <h3><%= @team.name %> Players</h3>
-<ul>
+<ul class="list-inline">
+ <div class="row g-5">
   <% @players.each do |player| %>
-    <li><%= link_to "#{player.first_name} #{player.last_name}", player %></li>
+  <div class="col-lg-3">
+    <li class="list-inline-item"><%= link_to "#{player.first_name} #{player.last_name}", player %></li>
+  </div>
   <% end %>
 </ul>
 
