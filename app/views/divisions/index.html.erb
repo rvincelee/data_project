@@ -1,14 +1,10 @@
 <div class="container text-center">
   <h1>Divisions</h1>
-  <ul class="list-inline">
-    <div class="row g-5">
+  <ul class="list-inline row g-5">
       <% @divisions.each do |division| %>
-      <div class="col-lg-3">
-        <li class="list-inline-item">
-          <%= link_to division.name, division %>
+        <li class="list-inline-item col">
+          <%= link_to division.name, division , class: "link-offset-2 link-underline link-underline-opacity-0"%>
         </li>
-      </div>
       <% end %>
-    </div>
   </ul>
 </div>

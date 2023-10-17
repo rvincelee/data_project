@@ -1,11 +1,10 @@
-<%= link_to('See all players', {controller: 'players', action: 'index'}) %>
+<%= link_to('See all players', {controller: 'players', action: 'index'}, class: "link-offset-2 link-underline link-underline-opacity-0") %>
 <br>
-<%= link_to("See team", team_path(@player.team, team_id: @player.team.id), class: 'back-link') %>
+<%= link_to("See team", team_path(@player.team, team_id: @player.team.id), class: 'back-link link-offset-2 link-underline link-underline-opacity-0p') %>
 <div class="text-center">
 <h1><%= "#{@player.first_name} #{@player.last_name}" %></h1>
 <h3>Player information</h3>
-<ul class="list-inline">
-<div class= "col">
+<ul class="list-inline row">
   <li class="list-inline-item">
     <% if @player.height_feet == nil %>
       Height: Unknown
@@ -13,8 +12,6 @@
       Height: <%= "#{@player.height_feet}'#{@player.height_inches}"%>
     <% end %>
   </li>
-  </div>
-  <div class= "col">
   <li class="list-inline-item">
     <% if @player.weight_pounds == nil %>
       Weight: Unknown
@@ -22,26 +19,17 @@
       Weight: <%= @player.weight_pounds %>
     <% end %>
   </li>
-  </div>
-    <div class= "col">
   <li class="list-inline-item">
       Position: <%= @player.position %>
   </li>
-  </div>
-    <div class= "col">
   <li class="list-inline-item">
-    Team: <%= link_to @player.team.name, @player.team %>
+    Team: <%= link_to @player.team.name, @player.team, class: "link-offset-2 link-underline link-underline-opacity-0" %>
   </li>
-  </div>
-    <div class= "col">
   <li class="list-inline-item">
-    Division: <%= link_to @player.team.division.name, @player.team.division %>
+    Division: <%= link_to @player.team.division.name, @player.team.division, class: "link-offset-2 link-underline link-underline-opacity-0" %>
   </li>
-  </div>
-    <div class= "col">
   <li class="list-inline-item">
-    Conference: <%= link_to @player.team.division.conference.name, @player.team.division.conference %>
+    Conference: <%= link_to @player.team.division.conference.name, @player.team.division.conference, class: "link-offset-2 link-underline link-underline-opacity-0" %>
   </li>
-</div>
 </ul>
 </div>
