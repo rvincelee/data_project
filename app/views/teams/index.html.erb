@@ -3,7 +3,7 @@
 
 <ul class="list-inline row g-5">
   <% @teams.each do |team| %>
-    <li class="list-inline-item col-lg-2"><%= link_to team.name, team %>
+    <li class="list-inline-item col-lg-2"><%= link_to team.name, team, class: "link-offset-2 link-underline link-underline-opacity-0"%>
   </li>
   <% end %>
 </ul>

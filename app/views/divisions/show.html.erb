@@ -1,13 +1,13 @@
-<%= link_to('See all divisions', {controller: 'divisions', action: 'index'}) %>
+<%= link_to('See all divisions', {controller: 'divisions', action: 'index'}, class: "link-offset-2 link-underline link-underline-opacity-0") %>
 <div class="container text-center">
 <h1><%= @division.name %> Division</h1>
 <h2>Conference:
-  <%= link_to @division.conference.name, @division.conference %>
+  <%= link_to @division.conference.name, @division.conference, class: "link-offset-2 link-underline link-underline-opacity-0" %>
 </h2>
 <h3><%= @division.name %> Teams</h3>
   <ul class="list-inline row g-5">
   <% @teams.each do |team| %>
-    <li class="list-inline-item col"><%= link_to team.name, team %></li>
+    <li class="list-inline-item col"><%= link_to team.name, team, class: "link-offset-2 link-underline link-underline-opacity-0" %></li>
   <% end %>
 </ul>
 </div>

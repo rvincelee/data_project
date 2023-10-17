@@ -3,7 +3,7 @@
   <ul class="list-inline row g-5">
   <% @conferences.each do |conference| %>
         <li class="list-inline-item col">
-          <%= link_to conference.name, conference %>
+          <%= link_to conference.name, conference , class: "link-offset-2 link-underline link-underline-opacity-0"%>
         </li>
   <% end %>
   </ul>

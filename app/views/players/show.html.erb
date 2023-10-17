@@ -1,6 +1,6 @@
-<%= link_to('See all players', {controller: 'players', action: 'index'}) %>
+<%= link_to('See all players', {controller: 'players', action: 'index'}, class: "link-offset-2 link-underline link-underline-opacity-0") %>
 <br>
-<%= link_to("See team", team_path(@player.team, team_id: @player.team.id), class: 'back-link') %>
+<%= link_to("See team", team_path(@player.team, team_id: @player.team.id), class: 'back-link link-offset-2 link-underline link-underline-opacity-0p') %>
 <div class="text-center">
 <h1><%= "#{@player.first_name} #{@player.last_name}" %></h1>
 <h3>Player information</h3>
@@ -23,13 +23,13 @@
       Position: <%= @player.position %>
   </li>
   <li class="list-inline-item">
-    Team: <%= link_to @player.team.name, @player.team %>
+    Team: <%= link_to @player.team.name, @player.team, class: "link-offset-2 link-underline link-underline-opacity-0" %>
   </li>
   <li class="list-inline-item">
-    Division: <%= link_to @player.team.division.name, @player.team.division %>
+    Division: <%= link_to @player.team.division.name, @player.team.division, class: "link-offset-2 link-underline link-underline-opacity-0" %>
   </li>
   <li class="list-inline-item">
-    Conference: <%= link_to @player.team.division.conference.name, @player.team.division.conference %>
+    Conference: <%= link_to @player.team.division.conference.name, @player.team.division.conference, class: "link-offset-2 link-underline link-underline-opacity-0" %>
   </li>
 </ul>
 </div>

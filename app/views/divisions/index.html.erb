@@ -3,7 +3,7 @@
   <ul class="list-inline row g-5">
       <% @divisions.each do |division| %>
         <li class="list-inline-item col">
-          <%= link_to division.name, division %>
+          <%= link_to division.name, division , class: "link-offset-2 link-underline link-underline-opacity-0"%>
         </li>
       <% end %>
   </ul>
