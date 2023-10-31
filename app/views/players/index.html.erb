@@ -4,7 +4,7 @@
 <%= form_tag(players_path, method: :get, class: 'search-form') do %>
   <%= text_field_tag(:search, params[:search], placeholder: 'Search by name') %>
 
-  <%= select_tag(:position, options_for_select(Player.distinct.pluck(:position).reject(&:empty?), params[:position]), include_blank: 'Select a position
+  <%= select_tag(:position, options_for_select(Player.distinct.pluck(:position).reject(&:empty?), params[:position]), include_blank: 'Select a position') %>
 
   <%= submit_tag('Search', class: 'btn btn-primary') %>
 <% end %>
